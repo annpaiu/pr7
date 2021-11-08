@@ -1,0 +1,9 @@
+// якщо файл не існує, створіть його:
+if (!file_exists('database/users.csv')) {
+   file_put_contents('database/users.csv', '');
+}
+
+// запис в файл в режимі додавання
+$fp = fopen('database/users.csv', 'a');
+fwrite($fp, "$name,$email,$gender \n");
+fclose($fp);
