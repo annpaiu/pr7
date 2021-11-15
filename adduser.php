@@ -7,18 +7,18 @@
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
    <style>
-       body{
-           padding-top: 3rem;
+body{
+    padding-top: 3rem;
        }
        .container {
-           width: 400px;
+    width: 400px;
        }
    </style>
 </head>
 <body>
 <div class="container">
    <h3>Add New User</h3>
-   <form action="handler.php" method="post">
+   <form action="handler.php" method="post" enctype="multipart/form-data">
        <div class="row">
            <div class="field">
                <label>Name: <input type="text" name="name"></label>
@@ -47,7 +47,9 @@
            <div class="file-field input-field">
                <div class="btn">
                    <span>Photo</span>
-                   <input type="file">
+                       Select image to upload:
+                       <input type="file" name="photo" id="fileToUpload">
+                       <input type="submit" value="Upload Image" name="submit">
                </div>
                <div class="file-path-wrapper">
                    <input class="file-path validate" type="text">
